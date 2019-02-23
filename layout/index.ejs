@@ -11,9 +11,14 @@
     <% if (index == 0 || index%3 == 0) { %>
         <article class="post-center">
     <% } else{ %>
-            <article class="post-normal">
+        <article class="post-normal">
    <% } %>
-            <a class="post-img" href="<%- url_for(post.path)%>" ></a>
+            <% if (post.imgUrl) { %>
+                <a style="background: url(<%- post.imgUrl%>)"
+                   class="post-img" href="<%- url_for(post.path)%>" ></a>
+            <%} else {%>
+                <a class="post-img" href="<%- url_for(post.path)%>" ></a>
+            <%}%>
             <div class="post-wrap">
                 <div class="post-title">
                     <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
