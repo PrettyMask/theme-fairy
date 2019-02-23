@@ -1,11 +1,14 @@
+<%- partial('_partial/headerNormal') %>
 <section class="archive">
-    <ul class="post-archive">
+    <div class="archive-wrap">
+        <div class="stepLine"></div>
+        <div class="archive-title">每天进步一点点</div>
         <% page.posts.each(function (post) { %>
-            <li class="post-item">
+            <div class="post-item">
                 <span class="post-date"><%= date(post.date, "YYYY-MM-DD") %></span>
                 <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
-            </li>
+            </div>
         <% }) %>
-    </ul>
+    </div>
 </section>
-<%- partial('_partial/paginator') %>
+<!--<%- partial('_partial/paginator') %>-->

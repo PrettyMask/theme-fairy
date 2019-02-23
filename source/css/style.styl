@@ -12,20 +12,41 @@ body {
   height 100%
   margin: 0 auto;
   position relative
+  left 0
+  &.slow-show{
+    animation : fade-in 1s forwards
+  }
 }
 
 .container {
-  z-index 10
-  max-width: 960px;
-  margin: 0 auto;
+  width 100%
   position relative
-  margin-top -70px
-  min-height 500px
+  min-height 960px
+}
+.about{
+  max-width 960px
+  margin 0 auto
+  border-radius 6px
+  padding 10px 30px
 }
 
-@import "_partial/bg.styl";
-@import "_partial/header";
+@keyframes fade-in {
+  from{
+    top -5%
+    opacity 0.3
+  }
+  to{
+    top 0
+    opacity 1
+  }
+}
+
+
+@import "_partial/headerIndex.styl";
+@import "_partial/headerNormal.styl";
+@import "_partial/index.styl";
 @import "_partial/post";
 @import "_partial/paginator.styl";
 @import "_partial/archive.styl";
 @import "_partial/footer.styl";
+@import "_highlight/index.styl"

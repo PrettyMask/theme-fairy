@@ -1,46 +1,124 @@
-.post {
-  margin: 0 auto 2em auto;
-  padding: 30px 50px;
-  background-color: #fff;
-  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
-  border-radius 5px
-}
-
-.posts  {
-  .post:first-child {
-    margin-top: 0;
-  }
-
-  .post-title {
-    font-size: 1.5em;
-
-    .post-title-link {
-      color: #368CCB;
-      text-decoration: none;
+.posts {
+  max-width 960px
+  margin 0 auto 70px auto
+  .post-whole {
+    max-width 850px
+    background #ffffff
+    padding 40px 50px
+    border-radius 6px
+    .post-title {
+      margin-bottom 20px
+      .title {
+        padding-bottom 15px
+        font-size 1.2em
+        font-weight 600
+      }
+      .post-meta {
+        color #767775
+        font-size 0.8em
+      }
     }
-  }
-
-  .post-content {
-    .read-more{
-      padding-top  10px
-      border-top solid 1px rgba(0,0,0,0.1)
+    .post-content{
+      font-weight: 300
+      line-height: line-height
+      p, table {
+        font-size 0.8em
+        margin: line-height 0
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: 600
+      }
+      h1, h2, h3, h4, h5, h6 {
+        line-height: line-height-title
+        margin: line-height-title 0
+      }
       a {
-        width: 100%;
-        display: inline-block;
-        color: #368CCB;
-        text-decoration: none;
+        color: #508fc8
+        text-decoration: none
+        &:hover{
+          text-decoration: underline
+        }
       }
-      a:hover{
-        color #33c8cd
+      figure{
+        margin  20px 0
+        overflow auto
+      }
+      ul, ol, dl {
+        font-size 0.8em
+        margin-top: line-height
+        margin-bottom: line-height
+        list-style-position: outside
+        padding-left: 1.4em
+      }
+      p {
+        padding 2px 0
+        margin: 0
+      }
+      img, video {
+        max-width: 100%
+        height: auto
+        display: block
+        margin: auto
+      }
+      iframe {
+        border: none
+      }
+      table {
+        border-collapse: collapse
+        border-spacing: 0
+      }
+      th {
+        font-weight: 600
+        border-bottom: 3px solid color-border
+        padding-bottom: 0.5em
+      }
+      td {
+        border-bottom: 1px solid color-border
+        padding: 10px 0
+      }
+      blockquote {
+        color: #777
+        quote: none
+        margin: 30px 0
+        position: relative
+        font-style: italic
+        padding-left: 20px
+        border-left 2px solid rgba(226, 62, 0, 0.5)
+      }
+      footer {
+        font-size: font-size
+        margin: line-height 0
+        font-family: font-sans
+      }
+      cite {
+        &:before {
+          content: "—"
+          padding: 0 0.5em
+        }
+      }
+      .pullquote {
+        text-align: left
+        width: 45%
+        margin: 0
+        &.left {
+          margin-left: 0.5em
+          margin-right: 1em
+        }
+        &.right {
+          margin-right: 0.5em
+          margin-left: 1em
+        }
+        .caption {
+          color: color-grey
+          display: block
+          font-size: 0.9em
+          margin-top: 0.5em
+          position: relative
+          text-align: center
+        }
       }
     }
-    a {
-      color: #368CCB;
-      text-decoration: none;
-    }
-  }
 
-  .post-meta {
-    color: #BABABA;
   }
 }
+@import "post/code.styl";
