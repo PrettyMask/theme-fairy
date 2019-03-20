@@ -1,0 +1,72 @@
+@media (max-width: 1023px ){
+  .headerIndex .header-outer .header-inner .menu{
+    padding 0 15px
+  }
+  .headerNormal .header-outer{
+    padding 0 15px
+  }
+  .posts-out{
+    padding 0 15px
+  }
+  .post-center {
+    margin 0 auto 2em auto
+    background-color: #fff;
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    border-radius 5px
+    width 100%
+    overflow hidden
+    .post-img{
+      display inline-block
+      width 115%
+      height 210px
+      background-image: url(post-default-center)
+      border-top-left-radius 6px
+      background-size 100% 100%
+    }
+    .post-wrap{
+      max-height 200px
+      padding: 10px 20px 0 20px;
+      display flex
+      flex-direction column
+    }
+    &:hover{
+      transition 0.3s
+      transform scale(1.01)
+    }
+  }
+  .post-normal {
+    margin 0 auto 2em auto
+    background-color: #fff;
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    border-radius 5px
+    width 100%
+    overflow hidden
+    .post-img{
+      display inline-block
+      width 100%
+      height 180px
+      background-image: url(post-default-normal)
+      border-top-left-radius 6px
+      border-top-right-radius 6px
+      background-size 100% 100%
+    }
+    .post-wrap{
+      max-height 200px
+      padding: 10px 20px 0 20px;
+      display flex
+      flex-direction column
+    }
+    &:hover{
+      transition 0.3s
+      transform scale(1.01)
+    }
+  }
+  .about{
+    >p{
+      >img{
+        width 80vw
+      }
+    }
+
+  }
+}
