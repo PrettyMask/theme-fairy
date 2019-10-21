@@ -6,43 +6,5 @@
 </head>
 <%- partial('_partial/headerIndex') %>
 <body>
-<section class="posts-out">
-    <% page.posts.each(function (post, index) { %>
-    <% if (index == 0 || index%3 == 0) { %>
-        <article class="post-center">
-    <% } else{ %>
-        <article class="post-normal">
-   <% } %>
-            <% if (post.imgUrl) { %>
-                <a style="background: url(<%- post.imgUrl%>)"
-                   class="post-img" href="<%- url_for(post.path)%>" ></a>
-            <%} else {%>
-                <a class="post-img" href="<%- url_for(post.path)%>" ></a>
-            <%}%>
-            <div class="post-wrap">
-                <div class="post-title">
-                    <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
-                </div>
-                <div class="post-meta">
-                    <span class="post-time"><%- date(post.date, "YYYY-MM-DD") %></span>
-                </div>
-                <div class="post-content-out">
-                    <% if (post.excerpt ) {%>
-                        <%- post.excerpt %>
-                    <% } else { %>
-                        <%- post.content %>
-                    <% } %>
-                </div>
-                <div class="read-more">
-                    <a href="<%- url_for(post.path)%>" class="read-more-link">
-                        <%- __('Post.readMore')%>
-                        <i class="iconfont icon-readmore"></i>
-                    </a>
-                </div>
-            </div>
-        </article>
-    <% }) %>
-</section>
-<%- partial('_partial/paginator') %>
 </body>
 </html>

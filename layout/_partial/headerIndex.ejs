@@ -2,7 +2,8 @@
     <div class="header-outer">
         <div class="header-inner">
             <div class="blog-title">
-                <%= config.title %>
+                <div class="head-img"></div>
+                <div class="head-title"><%= config.title %></div>
             </div>
             <nav class="navbar">
                 <ul class="menu">
@@ -14,5 +15,16 @@
                 </ul>
             </nav>
         </div>
+        <footer class="footer-wrap">
+            <div>
+                &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
+            </div>
+            <div>
+                <%= __('powered_by') %>
+                <a href="https://github.com/PrettyMask/theme-fairy" target="_blank">
+                    theme-fairy
+                </a>
+            </div>
+        </footer>
     </div>
 </header>
